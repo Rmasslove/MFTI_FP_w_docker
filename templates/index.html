@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение перевода</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}"/>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="h1-title">
+                <h1>Приложение перевода</h1>
+                <p>Данное приложение создано для перевода фраз и отдельных слов с английского на русский язык.</p>
+                <p>Оно предназначено для тех случаев, когда пользователь запомнил слово или фразу на слух, но не знает, как они пишутся по-английски.</p>
+                <p>Для перевода необходимо ввести английский текст русскими буквами, так, как он был запомнен.</p>
+                <p>Обработку текста выполняют последовательно три нейросетевые модели:</p>
+            </div>
+            <div class="p123">
+                <p>1. Text-to-Speech (TTS) Speech Synthesis Neural Network Model — модель нейронного синтеза речи.</p>
+                <p>2. Speech-to-Text (STT) Automatic Speech Recognition Neural Network Model — модель нейронного автоматического распознавания речи (ASR).</p>
+                <p>3. Machine Translation (MT) Text Translator Neural Network Model — модель нейронного перевода текста.</p>
+            </div>
+            <div class="p-end">
+                <p>Эти модели обрабатывают запрос поэтапно и выводят результат.</p>
+                <p>Данные модели среднего класса. Они показывают <strong>УДОВЛЕТВОРИТЕЛЬНУЮ</strong> точность и могут совершать ошибки.</p>
+            </div>
+        </header>
+        <main class="main">
+            <form id="text-form" class="text-form">
+                <div class="input-group">
+                    <input id="text_input" type="text" name="text_input" placeholder="Введите текст (до 50 символов)" required>
+                    <button class="button" type="submit">Загрузить</button>
+                </div>
+                <div class="error-span">
+                    <span id="error-message" class="error"></span>
+                </div>
+            </form>
+            <div id="messages" class="messages"></div>
+        </main>
+        <footer class="footer">
+            <h3><a class="target" target="_blank" href="https://github.com/Rmasslove/MFTI_fp">Rmasslove 2025</a></h3>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='validation.js') }}?v=1.0"></script>
+</body>
+</html>
