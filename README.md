@@ -26,4 +26,6 @@
 
 
 
-(Команда для сборки Docker-образа: docker build -t  mfti_fp_w_docker .)
+
+
+(Команда для сборки Docker-образа: <docker build -t  mfti_fp_w_docker .>)
