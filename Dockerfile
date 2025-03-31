@@ -7,7 +7,7 @@ WORKDIR /app/mfti_fp_w_docker
 # Копируем файлы проекта в контейнер
 COPY . /app/mfti_fp_w_docker
 
-# Устанавливаем зависимости
+# Устанавливаем зависимости из requirements
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Указываем порт, который будет использовать приложение

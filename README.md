@@ -25,7 +25,9 @@
 - Они демонстрируют **удовлетворительную точность**, но могут совершать ошибки. 
 
 
+![Изображение](./img.png)
 
 
+Команда для сборки Docker-образа: <docker build -t  mfti_fp_w_docker .>
 
-(Команда для сборки Docker-образа: <docker build -t  mfti_fp_w_docker .>)
+Ссылка на docker репозиторий: <docker pull rmasslove/mfti_fp_w_docker:v1.0>

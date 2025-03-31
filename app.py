@@ -89,7 +89,7 @@ def process_stage():
             return jsonify({"next_stage": "opus_mt"})
 
         elif stage == "opus_mt":
-            # Перевод текста на русский (Opus-MT)
+            # Перевод текста на русский (Helsinki-NLP/Opus-MT)
             try:
                 with open(TEMP_TEXT_PATH, 'r') as file:
                     english_text = file.read().strip()
